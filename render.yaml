@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: sycamore-api
+    runtime: docker
+    plan: free
+    envVars:
+      - key: APP_NAME
+        value: Sycamore
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        value: base64:d/mYhjMZWT2iA4ukYv3pEEnlu4VkfUKxT4DuIQBOQVc=
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
